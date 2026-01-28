@@ -1,0 +1,25 @@
+app = 'healthline-api'
+primary_region = 'sjc'
+
+[build]
+  dockerfile = 'api/Dockerfile'
+
+[env]
+  ENVIRONMENT = "production"
+  LOG_LEVEL = "INFO"
+  ENABLE_AWS_S3 = "false"
+  ENABLE_TRACING = "false"
+  ENABLE_TELEMETRY = "false"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ['app']
+
+[[vm]]
+  memory = '2gb'
+  cpu_kind = 'performance'
+  cpus = 1

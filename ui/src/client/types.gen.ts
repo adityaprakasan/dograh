@@ -292,8 +292,8 @@ export type CredentialResponse = {
 export type CurrentUsageResponse = {
     period_start: string;
     period_end: string;
-    used_dograh_tokens: number;
-    quota_dograh_tokens: number;
+    used_healthline_tokens: number;
+    quota_healthline_tokens: number;
     percentage_used: number;
     next_refresh_date: string;
     quota_enabled: boolean;
@@ -323,7 +323,7 @@ export type DailyUsageBreakdownResponse = {
     breakdown: Array<DailyUsageItem>;
     total_minutes: number;
     total_cost_usd?: number | null;
-    total_dograh_tokens: number;
+    total_healthline_tokens: number;
     currency?: string | null;
 };
 
@@ -331,7 +331,7 @@ export type DailyUsageItem = {
     date: string;
     minutes: number;
     cost_usd?: number | null;
-    dograh_tokens: number;
+    healthline_tokens: number;
     call_count: number;
 };
 
@@ -921,7 +921,7 @@ export type UpdateWorkflowStatusRequest = {
 
 export type UsageHistoryResponse = {
     runs: Array<WorkflowRunUsageResponse>;
-    total_dograh_tokens: number;
+    total_healthline_tokens: number;
     total_duration_seconds: number;
     total_count: number;
     page: number;
@@ -1150,7 +1150,7 @@ export type WorkflowRunUsageResponse = {
     workflow_name: string | null;
     name: string;
     created_at: string;
-    dograh_token_usage: number;
+    healthline_token_usage: number;
     call_duration_seconds: number;
     recording_url?: string | null;
     transcript_url?: string | null;
@@ -2366,7 +2366,7 @@ export type GetVoicesApiV1UserConfigurationsVoicesProviderGetData = {
         'X-API-Key'?: string | null;
     };
     path: {
-        provider: 'elevenlabs' | 'deepgram' | 'sarvam' | 'cartesia' | 'dograh';
+        provider: 'elevenlabs' | 'deepgram' | 'sarvam' | 'cartesia' | 'healthline';
     };
     query?: never;
     url: '/api/v1/user/configurations/voices/{provider}';

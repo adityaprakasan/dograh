@@ -314,7 +314,7 @@ export default function UsagePage() {
                 <div className="flex justify-between items-start">
                     <div>
                         <h1 className="text-3xl font-bold mb-2">Usage Dashboard</h1>
-                        <p className="text-muted-foreground">Monitor your Dograh Token usage and quota</p>
+                        <p className="text-muted-foreground">Monitor your Healthline Token usage and quota</p>
                     </div>
                         <div className="flex items-center gap-2">
                             <Globe className="h-4 w-4 text-muted-foreground" />
@@ -424,9 +424,9 @@ export default function UsagePage() {
                                         ) : (
                                             <>
                                                 <p className="text-2xl font-bold">
-                                                    {currentUsage.used_dograh_tokens.toLocaleString()} / {currentUsage.quota_dograh_tokens.toLocaleString()}
+                                                    {currentUsage.used_healthline_tokens.toLocaleString()} / {currentUsage.quota_healthline_tokens.toLocaleString()}
                                                 </p>
-                                                <p className="text-sm text-muted-foreground">Dograh Tokens</p>
+                                                <p className="text-sm text-muted-foreground">Healthline Tokens</p>
                                             </>
                                         )}
                                     </div>
@@ -512,7 +512,7 @@ export default function UsagePage() {
                                                 <TableHead className="font-semibold">Date</TableHead>
                                                 <TableHead className="font-semibold text-right">Duration</TableHead>
                                                 <TableHead className="font-semibold text-right">
-                                                    {organizationPricing?.price_per_second_usd ? 'Cost (USD)' : 'Dograh Tokens'}
+                                                    {organizationPricing?.price_per_second_usd ? 'Cost (USD)' : 'Healthline Tokens'}
                                                 </TableHead>
                                                 <TableHead className="font-semibold">Actions</TableHead>
                                             </TableRow>
@@ -548,7 +548,7 @@ export default function UsagePage() {
                                                     <TableCell className="text-right font-medium">
                                                         {organizationPricing?.price_per_second_usd && run.charge_usd !== undefined && run.charge_usd !== null
                                                             ? `$${run.charge_usd.toFixed(2)}`
-                                                            : run.dograh_token_usage.toLocaleString()
+                                                            : run.healthline_token_usage.toLocaleString()
                                                         }
                                                     </TableCell>
                                                     <TableCell>
@@ -571,7 +571,7 @@ export default function UsagePage() {
                                     <div className="mt-4 p-3 bg-muted rounded-md">
                                         <p className="text-sm text-muted-foreground">
                                             Total for filtered period: <span className="font-semibold text-foreground">
-                                                {usageHistory.total_dograh_tokens.toLocaleString()} Dograh Tokens
+                                                {usageHistory.total_healthline_tokens.toLocaleString()} Healthline Tokens
                                             </span>
                                             {' • '}
                                             <span className="font-semibold text-foreground">

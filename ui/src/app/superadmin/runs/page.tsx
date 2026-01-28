@@ -384,7 +384,7 @@ export default function RunsPage() {
                                                 <TableHead className="font-semibold">Tags</TableHead>
                                                 <TableHead className="font-semibold">Comment</TableHead>
                                                 <TableHead className="font-semibold">Duration</TableHead>
-                                                <TableHead className="font-semibold">Dograh Token</TableHead>
+                                                <TableHead className="font-semibold">Healthline Token</TableHead>
                                                 <TableHead className="font-semibold">Created At</TableHead>
                                                 <TableHead className="font-semibold">Actions</TableHead>
                                             </TableRow>

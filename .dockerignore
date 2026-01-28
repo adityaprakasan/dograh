@@ -1,2 +1,50 @@
-api/.env
-evals/
+# Git
+.git
+.gitignore
+.gitmodules
+
+# Documentation
+docs/
+*.md
+README.md
+CONTRIBUTING.md
+CHANGELOG.md
+
+# CI/CD
+.github/
+
+# UI files (not needed for API build)
+ui/node_modules/
+ui/.next/
+ui/out/
+ui/.turbo/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Temp files
+tmp/
+temp/
+.DS_Store

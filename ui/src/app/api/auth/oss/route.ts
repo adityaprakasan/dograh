@@ -5,8 +5,8 @@
 import { cookies } from 'next/headers';
 import { NextResponse } from 'next/server';
 
-const OSS_TOKEN_COOKIE = 'dograh_oss_token';
-const OSS_USER_COOKIE = 'dograh_oss_user';
+const OSS_TOKEN_COOKIE = 'healthline_oss_token';
+const OSS_USER_COOKIE = 'healthline_oss_user';
 
 function generateOSSToken(): string {
   return `oss_${Date.now()}_${crypto.randomUUID()}`;

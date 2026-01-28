@@ -14,8 +14,8 @@ import { useUserConfig } from "@/context/UserConfigContext";
 import { cn } from "@/lib/utils";
 
 // Providers that have MPS voice endpoints
-type TTSProviderWithVoices = "elevenlabs" | "deepgram" | "sarvam" | "cartesia" | "dograh";
-const MPS_VOICE_PROVIDERS: TTSProviderWithVoices[] = ["elevenlabs", "deepgram", "sarvam", "cartesia", "dograh"];
+type TTSProviderWithVoices = "elevenlabs" | "deepgram" | "sarvam" | "cartesia" | "healthline";
+const MPS_VOICE_PROVIDERS: TTSProviderWithVoices[] = ["elevenlabs", "deepgram", "sarvam", "cartesia", "healthline"];
 
 interface VoiceSelectorProps {
     provider: string;
@@ -53,7 +53,7 @@ export const VoiceSelector: React.FC<VoiceSelectorProps> = ({
             deepgram: "deepgram",
             sarvam: "sarvam",
             cartesia: "cartesia",
-            dograh: "dograh",
+            healthline: "healthline",
         };
         return providerMap[providerName.toLowerCase()] || null;
     }, []);

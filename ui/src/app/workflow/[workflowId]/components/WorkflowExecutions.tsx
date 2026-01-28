@@ -219,7 +219,7 @@ export function WorkflowExecutions({ workflowId, searchParams }: WorkflowExecuti
                                         <TableHead className="font-semibold">Call Type</TableHead>
                                         <TableHead className="font-semibold">Duration</TableHead>
                                         <TableHead className="font-semibold">Disposition</TableHead>
-                                        <TableHead className="font-semibold">Dograh Token</TableHead>
+                                        <TableHead className="font-semibold">Healthline Token</TableHead>
                                         <TableHead className="font-semibold">Actions</TableHead>
                                     </TableRow>
                                 </TableHeader>
@@ -257,8 +257,8 @@ export function WorkflowExecutions({ workflowId, searchParams }: WorkflowExecuti
                                                 )}
                                             </TableCell>
                                             <TableCell className="text-sm">
-                                                {typeof run.cost_info?.dograh_token_usage === 'number'
-                                                    ? `${run.cost_info.dograh_token_usage.toFixed(2)}`
+                                                {typeof run.cost_info?.healthline_token_usage === 'number'
+                                                    ? `${run.cost_info.healthline_token_usage.toFixed(2)}`
                                                     : "-"}
                                             </TableCell>
                                             <TableCell>

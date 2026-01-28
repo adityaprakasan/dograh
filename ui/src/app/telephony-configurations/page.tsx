@@ -237,7 +237,7 @@ export default function ConfigureTelephonyPage() {
                 <CardDescription>
                   {selectedProvider === "cloudonix" ? (
                     <>
-                      Cloudonix is an AI Connectivity platform, enabling you to connect Dograh to any SIP product or SIP Telephony Provider.<br/><br/>
+                      Cloudonix is an AI Connectivity platform, enabling you to connect Healthline to any SIP product or SIP Telephony Provider.<br/><br/>
                       <iframe
                         style={{ border: 0 }}
                         width="100%"
@@ -321,8 +321,8 @@ export default function ConfigureTelephonyPage() {
                       <ol className="list-decimal list-inside space-y-1 text-muted-foreground">
                         <li>Sign up for a Cloudonix account at https://cloudonix.com</li>
                         <li>Create an <i>API token</i> for your Cloudonix domain</li>
-                        <li>Configure your Cloudoinx <i>API Token</i> and <i>Cloudonix Domain Name</i> in Dograh</li>
-                        <li>Configure an optional outbound phone number for your Dograh agent</li>
+                        <li>Configure your Cloudoinx <i>API Token</i> and <i>Cloudonix Domain Name</i> in Healthline</li>
+                        <li>Configure an optional outbound phone number for your Healthline agent</li>
                       </ol>
                     </div>
                     <div className="bg-muted border border-border rounded p-3">
@@ -675,7 +675,7 @@ export default function ConfigureTelephonyPage() {
                       <p className="text-xs text-muted-foreground">
                         Configure inbound calling?{" "}
                         <a
-                          href="https://docs.dograh.com/integrations/telephony/inbound"
+                          href="https://docs.healthline.com/integrations/telephony/inbound"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-blue-600 dark:text-blue-400 hover:underline"

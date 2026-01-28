@@ -41,7 +41,7 @@ ENV NEXT_PUBLIC_AUTH_PROVIDER="local"
 ENV NEXT_PUBLIC_DEPLOYMENT_MODE="oss"
 ENV BACKEND_URL="http://api:8000"
 ENV NEXT_TELEMETRY_DISABLED="1"
-ENV NEXT_PUBLIC_CHATWOOT_URL="https://chat.dograh.com"
+ENV NEXT_PUBLIC_CHATWOOT_URL="https://chat.healthline.com"
 ENV NEXT_PUBLIC_CHATWOOT_TOKEN="3fkFx2mCEjNHjM9gaNc4A82X"
 
 # Build the application with standalone mode

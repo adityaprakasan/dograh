@@ -141,7 +141,7 @@ export function EmbedDialog({
                             buttonColor,
                             size: "medium",
                             autoStart: false,
-                            containerId: embedMode === "inline" ? "dograh-inline-container" : undefined,
+                            containerId: embedMode === "inline" ? "healthline-inline-container" : undefined,
                         },
                         usage_limit: null,
                         expires_in_days: null,
@@ -373,26 +373,26 @@ export function EmbedDialog({
                                                 <div className="rounded-lg bg-muted/50 p-4">
                                                     <h4 className="font-medium mb-2">Integration Instructions</h4>
                                                     <ul className="text-sm space-y-2 text-muted-foreground">
-                                                        <li>• Add a div with id=&quot;dograh-inline-container&quot; where you want the widget</li>
+                                                        <li>• Add a div with id=&quot;healthline-inline-container&quot; where you want the widget</li>
                                                         <li>• The widget will render inside this container</li>
                                                         <li>• You have full control over the container&apos;s styling</li>
-                                                        <li>• Call window.DograhWidget.start() to begin the call</li>
-                                                        <li>• Call window.DograhWidget.end() to end the call</li>
+                                                        <li>• Call window.HealthlineWidget.start() to begin the call</li>
+                                                        <li>• Call window.HealthlineWidget.end() to end the call</li>
                                                     </ul>
                                                 </div>
 
                                                 <div className="rounded-lg bg-blue-50 dark:bg-blue-950/20 p-4 border border-blue-200 dark:border-blue-800">
                                                     <h4 className="font-medium mb-2 text-blue-900 dark:text-blue-100">Example React Component</h4>
                                                     <pre className="text-xs overflow-x-auto">
-                                                        <code className="text-blue-800 dark:text-blue-200">{`export function DograhAgent() {
+                                                        <code className="text-blue-800 dark:text-blue-200">{`export function HealthlineAgent() {
   const [isCallActive, setIsCallActive] = useState(false);
 
   useEffect(() => {
     // Widget will auto-initialize when script loads
-    window.DograhWidget?.onCallStart(() => {
+    window.HealthlineWidget?.onCallStart(() => {
       setIsCallActive(true);
     });
-    window.DograhWidget?.onCallEnd(() => {
+    window.HealthlineWidget?.onCallEnd(() => {
       setIsCallActive(false);
     });
   }, []);
@@ -400,11 +400,11 @@ export function EmbedDialog({
   return (
     <div className="my-8">
       <h2>Talk to Our Agent</h2>
-      <div id="dograh-inline-container" className="min-h-[400px]">
+      <div id="healthline-inline-container" className="min-h-[400px]">
         {/* Widget renders here */}
       </div>
       <button
-        onClick={() => window.DograhWidget?.start()}
+        onClick={() => window.HealthlineWidget?.start()}
         disabled={isCallActive}
       >
         Start Call
