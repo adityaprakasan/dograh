@@ -83,9 +83,9 @@ services:
       ENVIRONMENT: "local"
       LOG_LEVEL: "INFO"
 
-      # Set this environment variable if you are using a custom
+      # Replace this environment variable if you are using a custom
       # domain to host the stack
-      # BACKEND_API_ENDPOINT: "CUSTOM_DOMAIN"
+      BACKEND_API_ENDPOINT: "http://localhost:8000"
 
       # Database configuration (using containerized postgres)
       DATABASE_URL: "postgresql+asyncpg://postgres:postgres@postgres:5432/postgres"
