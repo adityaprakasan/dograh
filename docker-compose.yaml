@@ -81,6 +81,7 @@ services:
     environment:
       # Core application config
       ENVIRONMENT: "local"
+      DEPLOYMENT_MODE: "oss"
       LOG_LEVEL: "INFO"
 
       # Replace this environment variable if you are using a custom
@@ -148,6 +149,7 @@ services:
       # Server-side URL (SSR, internal Docker network)
       BACKEND_URL: "http://api:8000"
       NODE_ENV: "oss"
+      NEXT_PUBLIC_AUTH_PROVIDER: "local"
 
       # Flag to enable/ disable posthog and sentry
       ENABLE_TELEMETRY: "${ENABLE_TELEMETRY:-true}"
